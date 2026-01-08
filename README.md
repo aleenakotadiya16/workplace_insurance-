@@ -1,76 +1,122 @@
-<img width="1777" height="807" alt="image" src="https://github.com/user-attachments/assets/00f7baff-fb85-43a0-92f6-d49ef053c37b" />**Analyzing Fatal Injury Patterns in Construction Incidents: An Explanatory Data Science Approach**
-🧭 Overview
-This project investigates workplace injuries in the construction industry, with a focus on understanding the factors associated with fatal outcomes. Rather than predicting individual cases, the goal is to analyze patterns, explore relationships, and explain what types of injuries or conditions are more likely to result in death.
+Absolutely, Aleena! I can help you turn your project description into a **polished, professional GitHub README**. Here's an edited version optimized for GitHub, with clear structure, markdown formatting, badges, and a focus on readability:
 
-**Key steps included:**
+---
 
-Exploratory Data Analysis: Injury pattern analysis by body part, nature of injury, and environmental/human/task-related factors
-Statsistical Testing: A/B testing using Fisher’s Exact Test to compare fatality rates during holidays vs. non-holidays
-Logistic regression to quantify how different features affect the likelihood of fatality
-Data Visualization using matplotlib and Power BI to bring insights to life
-**Dataset**
-Source: OSHA accident reports
-Size: ~4,800 incidents
-Columns: 25+ fields including injury type, body part affected, human/environmental factors, date, task assignment, etc.
+# **Analyzing Fatal Injury Patterns in Construction Incidents**
 
-Target Variable: Degree of Injury
-Encoded as binary:
-1 = Fatal
-0 = Non-Fatal
-Key Features Used:
-Nature of Injury
-Part of Body
-Event Type
-Human Factor
-Environmental Factor
-Task Assigned
-Is_Holiday
-Season
-**🔍 Exploratory Analysis Highlights**
-61% of incidents in the dataset resulted in fatalities.
-Head, internal, and whole-body injuries were much more likely to be fatal.
-Fingers, hands, and limbs were rarely fatal.
-Incidents on holidays showed slightly higher fatality odds but not statistically significant.
-Injury patterns showed meaningful seasonal and task-based trends.
-#🧪 Statistical Testing
-To evaluate whether holidays are associated with higher fatality rates, a Fisher’s Exact Test was conducted.
+*An Explanatory Data Science Approach*
+
+[![Python](https://img.shields.io/badge/Python-3.11-blue)](https://www.python.org/) [![Power BI](https://img.shields.io/badge/Power%20BI-Dashboard-yellow)](https://powerbi.microsoft.com/) [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
+
+---
+
+## **🧭 Overview**
+
+This project investigates workplace injuries in the **construction industry**, focusing on **factors associated with fatal outcomes**. Unlike predictive modeling, the goal here is to **analyze patterns, explore relationships, and explain which injury types or conditions are most likely to result in death**.
+
+Key objectives:
+
+* Identify high-risk injury types and body parts
+* Understand environmental, human, and task-related factors influencing fatalities
+* Use statistical and explanatory modeling to quantify risk
+* Create interactive visualizations for actionable insights
+
+---
+
+## **📊 Dataset**
+
+**Source:** OSHA Accident Reports
+**Size:** ~4,800 incidents
+**Columns:** 25+ fields including injury type, body part affected, human/environmental factors, date, task assignment, etc.
+
+**Target Variable:** `Degree of Injury`
+
+* 1 = Fatal
+* 0 = Non-Fatal
+
+**Key Features Used:**
+
+* Nature of Injury
+* Part of Body
+* Event Type
+* Human Factor
+* Environmental Factor
+* Task Assigned
+* Is_Holiday
+* Season
+
+---
+
+## **🔍 Exploratory Analysis Highlights**
+
+* **61%** of incidents resulted in fatalities
+* **High fatality risk**: Head, internal, and whole-body injuries
+* **Low fatality risk**: Fingers, hands, limbs
+* Slightly higher odds of fatal injuries during holidays, but **not statistically significant**
+* Seasonal and task-based patterns observed
+
+---
+
+## **🧪 Statistical Testing**
+
+**Test:** Fisher’s Exact Test for holidays vs. non-holidays
 
 **Result:**
-Odds Ratio: 1.35
-P-value: 0.18
-🔹 Interpretation: There was no statistically significant evidence that fatal injuries are more likely to occur on holidays.
 
-**🤖 Explanatory Modeling: Logistic Regression**
-A logistic regression model was used to understand which features were most strongly associated with fatal injuries.
+* Odds Ratio: 1.35
+* P-value: 0.18
 
-**✅ Performance:**
-ROC AUC = 0.96 → Excellent ability to distinguish between fatal and non-fatal injuries
-🔥 Top Features Associated with Fatalities:
-| Feature | Coefficient | Odds Ratio |
-| Nature of Injury: Asphyxiation, Drowning | +2.46 | ~11.7x | 
-| Part of Body: Head | +2.14 | ~8.5x | | Part of Body: Whole Body | +2.02 | ~7.5x |
-| Part of Body: Internal Injuries | +1.92 | ~6.8x |
-| Part of Body: Neck | +1.74 | ~5.7x |
+**Interpretation:** No statistically significant evidence that fatal injuries are more likely on holidays
 
-**📊 Data Visualization**
-To complement the Python-based analysis, a Power BI dashboard was created to explore the data interactively and visually communicate the insights.
-The dashboard includes:
-<img width="1777" height="807" alt="image" src="https://github.com/user-attachments/assets/5de8c746-0f12-42cc-bcfa-bf651c532ca9" />
+---
+
+## **🤖 Explanatory Modeling: Logistic Regression**
+
+A logistic regression model was used to **quantify the impact of features on fatality risk**.
+
+**Model Performance:**
+
+* ROC AUC = 0.96 → Excellent ability to distinguish fatal vs. non-fatal injuries
+
+**Top Features Associated with Fatalities:**
+
+| Feature                                  | Coefficient | Odds Ratio |
+| ---------------------------------------- | ----------- | ---------- |
+| Nature of Injury: Asphyxiation, Drowning | +2.46       | ~11.7x     |
+| Part of Body: Head                       | +2.14       | ~8.5x      |
+| Part of Body: Whole Body                 | +2.02       | ~7.5x      |
+| Part of Body: Internal Injuries          | +1.92       | ~6.8x      |
+| Part of Body: Neck                       | +1.74       | ~5.7x      |
+
+---
+
+## **📊 Data Visualization**
+
+A **Power BI dashboard** complements the analysis and allows **interactive exploration**:
+
+* Total, fatal, and non-fatal incidents
+* Most common injury types and affected body parts
+* Environmental and human factors contributing to injuries
+* Trends over time with filterable slicers
+
+![Dashboard Preview](https://github.com/user-attachments/assets/5de8c746-0f12-42cc-bcfa-bf651c532ca9)
+
+---
+
+## **💡 Key Takeaways**
+
+* Certain injury types and affected body parts carry **significantly higher fatality risk**
+* Logistic regression is effective for **explanatory analysis**
+* No significant difference in fatalities was observed on holidays
+* Explanatory data science provides **valuable insights for high-risk industries** like construction
+
+---
+
+## **🛠 Tools Used**
+
+* Python: `pandas`, `scikit-learn`, `matplotlib`, `seaborn`, `statsmodels`
+* Jupyter Notebook
+* Power BI for interactive dashboard visualizations
+* Git & GitHub for version control
 
 
-Total, fatal, and non-fatal incidents
-Most common injury types and affected body parts
-Environmental and human factors contributing to injuries
-Trends over time and filterable slicers for interactivity
-–
-
-**💡 Key Takeaways**
-Certain injury types and affected body parts carry significantly higher fatality risk.
-Logistic regression was effective as an explanatory model, not for forecasting but for interpretation.
-Statistical evidence did not support a significant difference in fatality rates on holidays.
-The project demonstrates the value of explanatory data science in high-risk industries like construction.
-📊 Tools Used
-Python (pandas, scikit-learn, matplotlib, seaborn, statsmodels)
-Jupyter Notebook
-Power BI (for dashboard visualizations)
-Git & GitHub
