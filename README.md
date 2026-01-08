@@ -1,6 +1,3 @@
-Absolutely, Aleena! I can help you turn your project description into a **polished, professional GitHub README**. Here's an edited version optimized for GitHub, with clear structure, markdown formatting, badges, and a focus on readability:
-
----
 
 # **Analyzing Fatal Injury Patterns in Construction Incidents**
 
